@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haidar — Software Engineer</title>
+  <meta name="description" content="Haidar is a software engineer and a graduate of the Syrian Private University, Class of 2026. Selected projects, experience and contact details.">
+  <meta name="theme-color" content="#EEF1F4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1620" media="(prefers-color-scheme: dark)">
+
+  <!-- Social sharing preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Haidar — Software Engineer">
+  <meta property="og:description" content="Software engineer. Syrian Private University, Class of 2026.">
+  <meta property="og:image" content="haidar-white.webp">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="haidar-cutout.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Theme before paint (avoids a flash), and mark that JS is available -->
+  <script>
+    document.documentElement.classList.add('js');
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Intro curtain (removed by JS; hides itself via CSS if JS never runs) -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__name">Haidar</span>
+      <span class="loader__count"><span class="loader__num">0</span>%</span>
+    </div>
+    <div class="loader__bar"></div>
+  </div>
+
+  <!-- Scroll progress + custom cursor (decorative) -->
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a class="nav__brand" href="#top" aria-label="Haidar, back to top">Haidar</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav__toggle-bar"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#work" data-scramble>Work</a></li>
+        <li><a href="#experience" data-scramble>Experience</a></li>
+        <li><a href="#skills" data-scramble>Skills</a></li>
+        <li><a href="#contact" data-scramble>Contact</a></li>
+        <li>
+          <button class="theme-toggle" type="button" aria-label="Switch colour theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO =================
+         Depth: 0 blueprint grid · 1 brass glow · 2 white arch + name · 3 portrait · 4 copy/plate -->
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="hero__grid" data-depth="0" aria-hidden="true"></div>
+      <div class="hero__glow" data-depth="1" aria-hidden="true"></div>
+
+      <div class="hero__stage">
+        <div class="hero__arch-pos" aria-hidden="true"><div class="hero__arch" data-depth="2"></div></div>
+
+        <h1 class="hero__name" id="hero-name" data-depth="2" aria-label="Haidar">
+          <span class="hero__name-inner" data-split="chars">Haidar</span>
+        </h1>
+
+        <div class="hero__figure-pos">
+          <img class="hero__figure" data-depth="3" src="haidar-cutout.webp" width="785" height="1256"
+               alt="Haidar in a black double-breasted blazer and white shirt, smiling">
+        </div>
+
+        <div class="plate" data-depth="4">
+          <span class="plate__school">Syrian Private University</span>
+          <span class="plate__degree">Bachelor of Computer &amp; Informatics Engineering</span>
+          <span class="plate__year">Class of 2026</span>
+        </div>
+      </div>
+
+      <div class="hero__copy" data-depth="4">
+        <p class="hero__role"><span data-type="Software Engineer">Software Engineer</span><span class="caret" aria-hidden="true"></span></p>
+        <p class="hero__intro">
+          I build reliable web and mobile software, from the database schema to the last pixel of the interface.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#work" data-magnetic>See my projects</a>
+          <!-- Put your CV at Haidar-CV.pdf -->
+          <a class="btn btn--ghost" href="Haidar-CV.pdf" download data-magnetic>Download CV</a>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll to the next section">
+        <span class="scroll-cue__line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ================= TECH MARQUEE ================= -->
+    <div class="marquee" aria-label="Technologies I work with">
+      <div class="marquee__track">
+        <ul class="marquee__list">
+          <li>Laravel</li><li>React</li><li>Flutter</li><li>Node.js</li><li>TypeScript</li><li>MySQL</li><li>PostgreSQL</li><li>Docker</li><li>Firebase</li><li>REST APIs</li>
+        </ul>
+        <ul class="marquee__list" aria-hidden="true">
+          <li>Laravel</li><li>React</li><li>Flutter</li><li>Node.js</li><li>TypeScript</li><li>MySQL</li><li>PostgreSQL</li><li>Docker</li><li>Firebase</li><li>REST APIs</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ================= STATEMENT (word-by-word lighting) ================= -->
+    <section class="statement wrap" id="about" aria-label="About me">
+      <p class="statement__text" data-split="words">
+        I turn messy requirements into clean, tested software: APIs that stay up, interfaces people enjoy,
+        and code the next developer is glad to inherit.
+      </p>
+      <dl class="facts">
+        <div><dt>Based in</dt><dd>Damascus, Syria</dd></div>
+        <div><dt>Focus</dt><dd>Full-stack web &amp; mobile</dd></div>
+        <div><dt>Languages</dt><dd>Arabic, English</dd></div>
+        <div><dt>Availability</dt><dd>Open to full-time &amp; remote roles</dd></div>
+      </dl>
+    </section>
+
+    <!-- ================= WORK (horizontal pinned gallery on desktop) =================
+         Each <article class="project"> is one project. Copy a block to add one. -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="work__track">
+
+        <header class="work__intro">
+          <h2 class="section__title" id="work-title" data-reveal="lines">Selected work</h2>
+          <p class="section__lead">A few projects that show how I think about problems, not only which tools I used.</p>
+          <p class="work__hint" aria-hidden="true">Keep scrolling</p>
+        </header>
+
+        <article class="project project--featured" style="--tone:#2F5D8A">
+          <div class="project__visual" aria-hidden="true">
+            <div class="mock mock--calendar">
+              <div class="mock__bar"><i></i><i></i><i></i></div>
+              <div class="mock__cal">
+                <span></span><span></span><span class="on"></span><span></span><span></span><span></span><span></span>
+                <span></span><span class="on"></span><span></span><span></span><span class="on"></span><span></span><span></span>
+                <span></span><span></span><span></span><span class="on"></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+          <div class="project__body">
+            <p class="project__meta">2026, graduation project</p>
+            <h3 class="project__title">Clinic appointment &amp; records platform</h3>
+            <p class="project__desc">
+              A web dashboard and companion mobile app that lets clinics manage bookings, patient records and
+              doctor schedules in one place. I led the backend design and built the booking engine that prevents
+              double-booking across branches.
+            </p>
+            <ul class="project__outcomes">
+              <li>Booking went from several phone calls to under a minute</li>
+              <li>Role-based access for admins, doctors and receptionists</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies"><li>Laravel</li><li>MySQL</li><li>React</li><li>Flutter</li></ul>
+            <div class="project__links"><a href="#" rel="noopener">Source code</a><a href="#" rel="noopener">Case study</a></div>
+          </div>
+        </article>
+
+        <article class="project" style="--tone:#8A5A2F">
+          <div class="project__visual" aria-hidden="true">
+            <div class="mock mock--shop">
+              <div class="mock__bar"><i></i><i></i><i></i></div>
+              <div class="mock__tiles"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="project__body">
+            <p class="project__meta">2025, team project</p>
+            <h3 class="project__title">E-commerce store with admin panel</h3>
+            <p class="project__desc">
+              Product catalogue, cart, order tracking and a sales dashboard. I built the checkout flow and the
+              inventory module that keeps stock in sync with orders.
+            </p>
+            <ul class="tags" aria-label="Technologies"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>React</li></ul>
+            <div class="project__links"><a href="#" rel="noopener">Source code</a><a href="#" rel="noopener">Live demo</a></div>
+          </div>
+        </article>
+
+        <article class="project" style="--tone:#3E7A5E">
+          <div class="project__visual" aria-hidden="true">
+            <div class="mock mock--phone">
+              <div class="mock__notch"></div>
+              <div class="mock__rows"><span class="done"></span><span class="done"></span><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="project__body">
+            <p class="project__meta">2025, personal</p>
+            <h3 class="project__title">Task manager mobile app</h3>
+            <p class="project__desc">
+              A cross-platform to-do and habit tracker with offline storage, reminders and cloud sync.
+              I designed the interface myself and shipped a test build to classmates.
+            </p>
+            <ul class="tags" aria-label="Technologies"><li>Flutter</li><li>Dart</li><li>Firebase</li><li>SQLite</li></ul>
+            <div class="project__links"><a href="#" rel="noopener">Source code</a></div>
+          </div>
+        </article>
+
+        <article class="project" style="--tone:#5B4B8A">
+          <div class="project__visual" aria-hidden="true">
+            <div class="mock mock--table">
+              <div class="mock__bar"><i></i><i></i><i></i></div>
+              <div class="mock__table"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="project__body">
+            <p class="project__meta">2024, course project</p>
+            <h3 class="project__title">University library system</h3>
+            <p class="project__desc">
+              A desktop application for borrowing, returns and fines, built with a layered architecture and
+              unit tests. Designed in UML before a single line of code was written.
+            </p>
+            <ul class="tags" aria-label="Technologies"><li>Java</li><li>JavaFX</li><li>PostgreSQL</li><li>JUnit</li></ul>
+            <div class="project__links"><a href="#" rel="noopener">Source code</a></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE (line draws on scroll) ================= -->
+    <section class="section wrap" id="experience" aria-labelledby="exp-title">
+      <h2 class="section__title" id="exp-title" data-reveal="lines">Experience &amp; education</h2>
+
+      <ol class="timeline">
+        <li class="timeline__line" aria-hidden="true"><span></span></li>
+        <li class="timeline__item">
+          <time class="timeline__when">2026</time>
+          <div>
+            <h3 class="timeline__title">Bachelor of Computer &amp; Informatics Engineering</h3>
+            <p class="timeline__where">Syrian Private University</p>
+            <p class="timeline__desc">Graduated with the Class of 2026. Coursework in software engineering, algorithms, databases, networks and distributed systems.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <time class="timeline__when">2025</time>
+          <div>
+            <h3 class="timeline__title">Software Engineering Intern</h3>
+            <p class="timeline__where">Company name, Damascus</p>
+            <p class="timeline__desc">Worked on internal web tools with the backend team, wrote API endpoints and fixed production bugs under code review.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <time class="timeline__when">2024</time>
+          <div>
+            <h3 class="timeline__title">Freelance Developer</h3>
+            <p class="timeline__where">Self-employed</p>
+            <p class="timeline__desc">Built websites and small business systems for local clients, from requirements to deployment.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section wrap" id="skills" aria-labelledby="skills-title">
+      <h2 class="section__title" id="skills-title" data-reveal="lines">Skills</h2>
+
+      <div class="skills">
+        <div class="skills__group">
+          <h3>Languages</h3>
+          <ul class="chips"><li>JavaScript / TypeScript</li><li>PHP</li><li>Dart</li><li>Java</li><li>Python</li><li>SQL</li></ul>
+        </div>
+        <div class="skills__group">
+          <h3>Frameworks</h3>
+          <ul class="chips"><li>React</li><li>Laravel</li><li>Node.js &amp; Express</li><li>Flutter</li></ul>
+        </div>
+        <div class="skills__group">
+          <h3>Data &amp; infrastructure</h3>
+          <ul class="chips"><li>MySQL</li><li>PostgreSQL</li><li>MongoDB</li><li>Firebase</li><li>Docker</li><li>Linux</li></ul>
+        </div>
+        <div class="skills__group">
+          <h3>Practices</h3>
+          <ul class="chips"><li>Git &amp; code review</li><li>REST API design</li><li>OOP &amp; design patterns</li><li>Unit testing</li><li>Agile / Scrum</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT (circle iris reveal) ================= -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact__inner wrap">
+        <h2 class="contact__title" id="contact-title" data-split="words-rise">Hiring for your team? I'd like to hear about it.</h2>
+        <p class="contact__lead">The fastest way to reach me is email. I usually reply within a day.</p>
+        <div class="contact__actions">
+          <a class="btn btn--brass btn--large" href="mailto:hidarabokaraa27@gmail.com" data-magnetic>hidarabokaraa27@gmail.com</a>
+        </div>
+        <ul class="contact__links">
+          <li><a href="https://www.linkedin.com/in/your-profile" rel="noopener" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/your-username" rel="noopener" target="_blank">GitHub</a></li>
+          <li><a href="Haidar-CV.pdf" download>CV (PDF)</a></li>
+        </ul>
+      </div>
+
+      <footer class="site-footer wrap">
+        <p>&copy; <span id="year">2026</span> Haidar</p>
+        <a href="#top">Back to top</a>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Animation libraries: GSAP + ScrollTrigger (motion), Lenis (smooth scroll).
+       If they fail to load, the page still works and shows all content. -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
