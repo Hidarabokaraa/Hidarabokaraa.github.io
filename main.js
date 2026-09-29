@@ -386,10 +386,10 @@
       }
     });
 
-    // Inside the gallery: mock UI drifts against the motion, text slides in
+    // Inside the gallery: screenshot frame drifts against the motion, text slides in
     document.querySelectorAll('.work .project').forEach(function (p) {
-      gsap.fromTo(p.querySelector('.mock'), { xPercent: 18, rotate: 3 }, {
-        xPercent: -18, rotate: -3, ease: 'none',
+      gsap.fromTo(p.querySelector('.frame'), { xPercent: 7, rotate: 1.5 }, {
+        xPercent: -7, rotate: -1.5, ease: 'none',
         scrollTrigger: { trigger: p, containerAnimation: horizontal, start: 'left right', end: 'right left', scrub: true }
       });
       gsap.from(p.querySelectorAll('.project__body > *'), {
